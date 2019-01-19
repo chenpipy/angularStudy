@@ -1,0 +1,32 @@
+@import '../variable.less';
+
+.head {
+  background-color: @headBgColor;
+  overflow: hidden;
+  ul{
+    height:30px;
+    line-height: 30px;
+  }
+  ul > li {
+    list-style: none;
+    vertical-align: center;
+  }
+  ul > .item1 {
+    float: left;
+    margin: 0px;
+    padding: 0 0 0 6px;
+
+
+  }
+  ul > .item2 {
+    float:right;
+    padding:0 6px 0 0;
+    >button {
+      background-color:@warnColor ;
+      line-height: 20px;
+      height: 20px;
+      vertical-align: center;
+      border-radius: 3px;
+    }
+  }
+}
