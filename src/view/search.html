@@ -1,3 +1,10 @@
-<div>
-    search
+<div class="search-bar ta-c">
+    <button ng-click="name='';search();">取消</button>
+    <input ng-model="name" type="text" placeholder="搜索职位/公司/城市">
+    <button ng-click="search();" class="ta-l">
+        搜索
+    </button>
 </div>
+<div app-tab data="tabList" select-id="selectId"></div>
+<div app-content name="selectId" ></div>
+<div app-foot></div>
