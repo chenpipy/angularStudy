@@ -5,11 +5,10 @@ angular.module("app").directive('appPositionInfo', ['$http', function($http){
     replace: true,
     templateUrl: 'view/template/positionInfo.html',
     scope: {
-      isActive: '=',
       isLogin: '=',
       pos: '='
     },
-    link: function($scope) {
+   /* link: function($scope) {
       $scope.$watch('pos', function(newVal) {
         if(newVal) {
           $scope.pos.select = $scope.pos.select || false;
@@ -25,6 +24,6 @@ angular.module("app").directive('appPositionInfo', ['$http', function($http){
           $scope.imagePath = $scope.pos.select?'image/star-active.png':'image/star.png';
         });
       }
-    }
+    }*/
   }
 }]);

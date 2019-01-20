@@ -2,31 +2,24 @@
 
 .head {
   background-color: @headBgColor;
-  overflow: hidden;
-  ul{
-    height:30px;
-    line-height: 30px;
+  .h(40);
+  .lh(40);
+  padding: 0 7px;
+  .text {
+    color: @defaultColor;
   }
-  ul > li {
-    list-style: none;
-    vertical-align: center;
+  .custom {
+    background-color: @warnColor;
+    border-color: @warnColor;
+    color: @defaultColor;
+    border-style: dashed;
+    .mt(7);
+    .pl(15);
+    .pr(15);
   }
-  ul > .item1 {
-    float: left;
-    margin: 0px;
-    padding: 0 0 0 6px;
-
-
-  }
-  ul > .item2 {
-    float:right;
-    padding:0 6px 0 0;
-    >button {
-      background-color:@warnColor ;
-      line-height: 20px;
-      height: 20px;
-      vertical-align: center;
-      border-radius: 3px;
-    }
+  .back-btn {
+    font-size: 20px;
+    width: 1rem;
+    left: 0;
   }
 }
