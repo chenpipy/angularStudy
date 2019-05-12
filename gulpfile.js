@@ -68,12 +68,12 @@ gulp.task('clean', function() {
 
 gulp.task('serve', ['build'], function() {
   $.connect.server({
-    root: [app.devPath],
+    root: ['./'],
     livereload: true,
-    port: 3000
+    port: 4000
   });
 
-  open('http://localhost:3000');
+  open('http://localhost:4000');
 
   gulp.watch('bower_components/**/*', ['lib']);
   gulp.watch(app.srcPath + '**/*.html', ['html']);

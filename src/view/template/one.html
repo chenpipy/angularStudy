@@ -1,0 +1,68 @@
+<div class="animated fadeInLeft">
+    <style>
+        .item {
+            width: 200px;
+            height: 200px;
+            background-color: #01c2a3;
+        }
+
+        .item.ng-hide {
+            animation: my-move1 0.75s ease-in-out;
+        }
+
+        @keyframes my-move {
+            0% {
+                opacity: 0;
+                transform: translate(-200px, 0)
+            }
+            100% {
+                opacity: 1;
+                transform: translate(0, 0)
+            }
+        }
+
+        @keyframes my-move1 {
+            0% {
+                opacity: 1;
+                transform: translate(0, 0)
+            }
+            100% {
+                opacity: 0;
+                transform: translate(-200px, 0)
+            }
+        }
+
+        .fade.ng-enter {
+            animation: my-move 0.75s ease-in-out;; /* 当使用css transition实现动画效果时，在开始时的样式中必须包含transition的设置 */
+            opacity: 0;
+        }
+        /* 结束时的样式 */
+        .fade.ng-enter.ng-enter-active {
+            /*opacity: 1;*/
+        }
+
+        .fade.ng-leave {
+            animation: my-move1 0.75s ease-in-out;
+        }
+        .fade.ng-leave.ng-leave-active {
+            /*opacity:0;*/
+        }
+    </style>
+    <h1 ng-bind="one"></h1>
+    <input type="text" ng-model="one">
+    <h1 ng-bind="three"></h1>
+    <h2 ng-bind="two"></h2>
+    <label for="">two：</label><input type="text" ng-model="two">
+    <br>
+    <div class="item fade" ng-if="itemShow">
+
+    </div>
+    <div>
+        <div ng-if="bool" class="fade">
+            Fade me in out
+        </div>
+        <button ng-click="bool=true">Fade In!</button>
+        <button ng-click="bool=false">Fade Out!</button>
+    </div>
+    ---------------------------
+</div>

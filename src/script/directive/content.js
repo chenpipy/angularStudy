@@ -2,7 +2,7 @@ angular.module('app').directive('appContent', [function () {
     return {
         restrict: 'A',
         replace: true,
-        templateUrl: 'view/template/content.html',
+        templateUrl: 'dist/view/template/content.html',
         scope:{
             name:'='
         }

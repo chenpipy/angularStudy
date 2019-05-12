@@ -3,7 +3,7 @@ angular.module('app').directive('appHeadBar', [function(){
   return {
     restrict: 'A',
     replace: true,
-    templateUrl: 'view/template/headBar.html',
+    templateUrl: 'dist/view/template/headBar.html',
     scope: {
       text: '@'
     },

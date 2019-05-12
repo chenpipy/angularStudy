@@ -3,7 +3,7 @@ angular.module("app").directive('appPositionInfo', ['$http', function($http){
   return {
     restrict: 'A',
     replace: true,
-    templateUrl: 'view/template/positionInfo.html',
+    templateUrl: 'dist/view/template/positionInfo.html',
     scope: {
       isLogin: '=',
       pos: '='

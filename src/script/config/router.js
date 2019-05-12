@@ -1,17 +1,21 @@
 angular.module('app').config(['$stateProvider','$urlRouterProvider',function ($stateProvider,$urlRouterProvider) {
     $stateProvider.state('main',{
         url:'/main',
-        templateUrl:'view/main.html',
+        templateUrl:'dist/view/main.html',
         controller:'mainCtrl'
     }).state('position',{
         url:'/position/:id',
-        templateUrl:'view/position.html',
+        templateUrl:'dist/view/position.html',
         controller:'positionCtrl'
         }
     ).state('search',{
         url:'/search',
-        templateUrl:'view/search.html',
+        templateUrl:'dist/view/search.html',
         controller:'searchCtrl'
+    }).state('add',{
+        url:'/add',
+        templateUrl:'dist/view/add.html',
+        controller:'addCtrl'
     })
-    $urlRouterProvider.otherwise('main');
+    $urlRouterProvider.otherwise('add');
 }])
